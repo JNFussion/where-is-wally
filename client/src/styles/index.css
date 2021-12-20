@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Luckiest+Guy&display=swap");
+
+@layer base {
+  *,
+  *::after,
+  *::before {
+    @apply box-border font-lato;
+  }
+}
+
+@layer components {
+  body {
+    @apply bg-zinc-900;
+  }
+
+  li:nth-child(odd) {
+    @apply mb-4;
+  }
+}
+
+.trans-hover {
+  @apply transition-all ease-in-out duration-200;
+}

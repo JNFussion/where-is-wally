@@ -1,7 +1,12 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        lato: ["Lato", "sans-serif"],
+        "luckiest-guy": ["Luckiest Guy", "cursive"],
+      },
+    },
   },
   plugins: [],
 };
