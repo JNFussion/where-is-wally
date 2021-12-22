@@ -5530,6 +5530,11 @@
   "resolved" "https://registry.npmjs.org/klona/-/klona-2.0.5.tgz"
   "version" "2.0.5"
 
+"konva@^8.3.1":
+  "integrity" "sha512-9YVM/nKWKTdGppPkhVY+E1FI+brrSmPygPO1qUSH2Dd7q0bgCX8V9DLqOp15myY7Wxmy5JDx9dWdd0fQZpikZw=="
+  "resolved" "https://registry.npmjs.org/konva/-/konva-8.3.1.tgz"
+  "version" "8.3.1"
+
 "language-subtag-registry@~0.3.2":
   "integrity" "sha512-L0IqwlIXjilBVVYKFT37X9Ih11Um5NEl9cbJIuU/SwP/zEEAbBPOnEeeuxVMf45ydWQRDQN3Nqc96OgbH1K+Pg=="
   "resolved" "https://registry.npmjs.org/language-subtag-registry/-/language-subtag-registry-0.3.21.tgz"
