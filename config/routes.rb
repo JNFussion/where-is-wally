@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   get "api/level/:id", to: "level#show"
+  resources :users, only: [:create, :update]
 end

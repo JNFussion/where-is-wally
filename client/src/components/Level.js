@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Konva from "konva";
-import { useLocation, useParams } from "react-router-dom";
+import PropTypes from "prop-types";
+import { Link, useLocation, useParams } from "react-router-dom";
 import Head from "./Head";
 import Button from "./Button";
 import Wally from "../assets/images/Character.Waldo.webp";
@@ -81,7 +82,7 @@ const Level = function Level() {
 
   const [answers, setAnswers] = useState({});
   useEffect(() => {
-    fetch("/api/level/1")
+    fetch(`/api/level/${id}`)
       .then((response) => response.json())
       .then((data) => setAnswers(data));
   }, []);
@@ -152,10 +153,10 @@ const Level = function Level() {
   useEffect(() => {
     if (answers.characters) {
       const rect = stage.current.find("#scope")[0];
-      document.getElementById("characters").addEventListener("click", (e) => {
+      const buttons = document.getElementById("characters");
+      buttons.addEventListener("click", (e) => {
         if (e.target.id && clicked.current) {
           processAnswer(answers, e.target.id, id, rect, layers.current.results);
-          console.log(stage.current.find(`#${e.target.id}`).length);
           if (stage.current.find(`#${e.target.id}`).length) {
             e.target.disabled = true;
             e.target.classList.add("scale-95", "brightness-50");
@@ -164,7 +165,7 @@ const Level = function Level() {
         }
       });
     }
-  }, [answers]);
+  }, [answers, id]);
 
   return (
     <article className="max-w-[1500px] mx-auto text-white">
@@ -174,9 +175,6 @@ const Level = function Level() {
           <div id="scene" />
         </main>
         <aside className="h-full flex flex-col">
-          <div className="w-fit px-4 py-2 mx-auto  font-bold text-xl bg-zinc-700">
-            00:00
-          </div>
           <p className="p-4 my-2 bg-zinc-900/90">
             When you find a character on the scene click on them. To confirm
             your answer click on the images below.

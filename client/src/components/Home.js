@@ -8,7 +8,7 @@ import level5 from "../assets/images/level_5.png";
 import level6 from "../assets/images/level_6.png";
 import Head from "./Head";
 
-const Home = function Home(params) {
+const Home = function Home() {
   const [images, setimages] = useState([
     level1,
     level2,
@@ -23,7 +23,11 @@ const Home = function Home(params) {
       <Head />
       <ul className="p-2 my-6 mx-4 columns-3 rounded bg-zinc-700 shadow shadow-zinc-700/20">
         {images.map((img, index) => (
-          <li className="p-4 pt-0 rounded bg-zinc-800/90 shadow-md shadow-zinc-800/70 trans-hover hover:scale-95">
+          <li
+            // eslint-disable-next-line react/no-array-index-key
+            key={index}
+            className="p-4 pt-0 rounded bg-zinc-800/90 shadow-md shadow-zinc-800/70 trans-hover hover:scale-95"
+          >
             <article>
               <h2 className="py-2 text-xl text-zinc-50 text-bold text-center">
                 <Link to={`level/${index + 1}`}>Level {index + 1}</Link>
