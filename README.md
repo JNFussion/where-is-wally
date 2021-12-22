@@ -1,24 +1,7 @@
-# README
+# Where's wally?
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project is from [This project is from The odin project's JavaScript course.](https://www.theodinproject.com/paths/full-stack-ruby-on-rails/courses/javascript/lessons/where-s-waldo-a-photo-tagging-app-javascript). The project consist in make the Where's wally? game.
 
-Things you may want to cover:
+There are 6 levels, in each level you have to find 5 characters. When you find a character you click in them, the game check if it is correct and them jail than caracter in a green square.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The goal of the project is to learn to integrate backend server.
